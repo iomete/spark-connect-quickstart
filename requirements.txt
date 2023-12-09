@@ -1,0 +1,26 @@
+# PySpark dependencies (required)
+pyspark==3.5.0
+pyarrow>=4.0.0
+pandas>=1.4.4
+
+# Spark Connect (required)
+grpcio>=1.59.3
+grpcio-status>=1.59.3
+googleapis-common-protos>=1.56.4
+
+# PySpark dependencies (optional)
+# numpy>=1.21
+# scipy
+# plotly
+# mlflow>=2.3.1
+# scikit-learn
+# matplotlib
+
+
+# # TorchDistributor dependencies
+# torch<=2.0.1
+# torchvision
+# torcheval
+
+# # DeepspeedTorchDistributor dependencies
+# deepspeed; sys_platform != 'darwin'

@@ -31,7 +31,9 @@ For detailed information, visit [Spark Connect Documentation](https://spark.apac
 
 ## Running Examples
 
-### Installation of Python Libraries
+### Python
+
+#### Installation of Python Libraries 
 
 Dependencies are listed in `requirements.txt`. Installation in a virtual environment is recommended:
 
@@ -48,7 +50,7 @@ pip3 install -r requirements.txt
 ```
 
 
-### Running PySpark Code
+#### Running PySpark Code
 
 Copy the connection to the remote Spark Connect Clusters from the IOMETE console and paste it in the spark builder.
 
@@ -61,10 +63,52 @@ python example.py
 ```
 
 
-### Running the Example Notebook
+#### Running the Example Notebook
 
 The provided notebook can be run in Jupyter locally, or through interfaces like Visual Studio Code or PyCharm. Before execute the notebook, retrieve the Spark Connect cluster connection details from the IOMETE console and integrate them into the spark builder in the notebook.
 
 
-### Ease of Writing Spark Code
+#### Ease of Writing Spark Code
 Beauty of Spark remote connect, it's only the thin client running on the local machine. Heavy lifting and all configurations are already implemented on the server side
+
+### R
+
+This project uses R, `sparklyr`, and `renv` to connect to an IOMETE Spark cluster and run example Spark workloads.
+Under the hood, `sparklyr` uses Python as the new interface. In turn, Python uses gRPC to interact with Spark. `sparklyr` uses `reticulate` to interact with the Python API. sparklyr extends the functionality, and user experience, by providing the `dplyr` back-end, DBI back-end and RStudio’s Connection pane integration.
+
+Because sparklyr integrates deeply with dplyr, you can write familiar R pipelines (filter(), select(), group_by(), summarise(), etc.). These operations are not executed in R; instead, sparklyr translates your dplyr code into Spark SQL, sends it through Spark Connect, and Spark executes the query remotely on the cluster. The result is a natural R syntax with full distributed compute behind it.
+
+#### Installation of R Packages (via renv)
+
+The project includes an renv.lock file that captures all required package versions.
+
+Restore the environment in a R session:
+
+```
+renv::restore()
+```
+
+If renv is not installed:
+
+```
+install.packages("renv")
+renv::restore()
+```
+
+This recreates the exact package library defined in the lockfile.
+
+## Running the Sparklyr Example
+
+Retrieve the Spark Connect cluster connection details from the IOMETE console and paste the connection string into the spark_connect() call inside example.R.
+
+Run the script:
+
+```
+Rscript example.R
+```
+
+or from an R console:
+
+```
+source("example.R")
+```

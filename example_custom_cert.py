@@ -15,7 +15,7 @@ class CustomChannelBuilder(ChannelBuilder):
 
 sc_url = "sc://..."
 
-print("> Creating session")
+print("> Creating session!")
 
 spark = (
     SparkSession

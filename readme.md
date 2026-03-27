@@ -2,6 +2,8 @@
 
 This repository provides example PySpark scripts and a notebook demonstrating how to connect to a Spark Connect cluster hosted on IOMETE.
 
+For step-by-step instructions on running each example, see [QUICKSTART.md](QUICKSTART.md).
+
 
 ## Spark Connect Overview
 

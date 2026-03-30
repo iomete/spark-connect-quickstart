@@ -8,6 +8,9 @@ grpcio>=1.71.0
 grpcio-status>=1.71.0
 googleapis-common-protos>=1.69.2
 
+# Setup tools
+setuptols>=65.5.0
+
 # PySpark dependencies (optional)
 # numpy>=1.21
 # scipy

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "labels": ["dependencies", "renovate"],
+  "enabledManagers": ["pip_requirements", "github-actions"],
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 0,
+  "dependencyDashboard": true,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "rangeStrategy": "replace"
+  },
+  "osvVulnerabilityAlerts": true,
+  "packageRules": [
+    {
+      "description": "Pin GitHub Actions to commit SHA digests to prevent supply chain attacks",
+      "matchManagers": ["github-actions"],
+      "pinDigests": true
+    }
+  ]
+}

@@ -6,7 +6,7 @@ pyarrow==23.0.1
 # Spark Connect dependencies
 grpcio==1.67.1
 googleapis-common-protos==1.75.5
-grpcio-status==1.67.1
+grpcio-status==1.84.0
 
 # Only required for python version >= 3.12
 setuptools==83.0.0

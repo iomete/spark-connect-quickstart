@@ -1,5 +1,5 @@
 # PySpark dependencies (required)
-pyspark==3.5.5
+pyspark==3.5.8
 pyarrow>=19.0.0
 pandas>=2.2.3
 

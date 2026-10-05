@@ -4,7 +4,7 @@ pandas==2.2.3
 pyarrow==23.0.1
 
 # Spark Connect dependencies
-grpcio==1.67.1
+grpcio==1.84.0
 googleapis-common-protos==1.75.5
 grpcio-status==1.67.1
 
